@@ -1,70 +1,17 @@
 [
+ 
   {
-    "titulo": "Curso de React.js Completo",
-    "instituicao": "Origamid",
-    "data": "2024-02-15",
-    "cargaHoraria": "40h",
-    "arquivo": "assets/certificados/2024-02-curso-react.pdf",
+    "titulo": "Análise dos dados de notificação de dengue no município de Viçosa, MG no período de 1998 a 2014",
+    "instituicao": "11º Congresso Brasileiro de Saúde Coletiva (ABRASCO)",
+    "data": "2015-08-01",
+    "cargaHoraria": "-",
+    "arquivo": "assets/certificados/2015/pdf/saude-coletiva-abrasco-2015.pdf",
+    "miniatura": "assets/certificados/2015/img/saude-coletiva-abrasco-2015.png",
     "tecnologias": [
-      "React",
-      "JavaScript",
-      "Frontend",
-      "CSS"
+      "Análise de Dados",
+      "Saúde Pública",
+      "Epidemiologia"
     ],
-    "descricao": "Aprofundamento em React Hooks, Router, Redux, formulários, animações de transição de rota e publicação otimizada em produção."
-  },
-  {
-    "titulo": "HTML5 e CSS3 Moderno",
-    "instituicao": "Curso em Vídeo",
-    "data": "2023-01-10",
-    "cargaHoraria": "20h",
-    "arquivo": "assets/certificados/2023-01-curso-html.pdf",
-    "tecnologias": [
-      "HTML",
-      "CSS",
-      "Design Responsivo"
-    ],
-    "descricao": "Conceitos fundamentais de semântica web, acessibilidade digital, grids flexíveis e estruturas estruturadas de CSS moderno."
-  },
-  {
-    "titulo": "JavaScript ES6+",
-    "instituicao": "Udemy",
-    "data": "2023-06-20",
-    "cargaHoraria": "15h",
-    "arquivo": "assets/certificados/2023-06-curso-js.png",
-    "tecnologias": [
-      "JavaScript",
-      "ES6+",
-      "Programação Funcional"
-    ],
-    "descricao": "Estudo intensivo sobre escopo léxico, sintaxe moderna, manipulação do DOM de forma nativa e requisições assíncronas com APIs rest."
-  },
-  {
-    "titulo": "Formação Frontend Developer",
-    "instituicao": "Alura",
-    "data": "2024-08-05",
-    "cargaHoraria": "120h",
-    "arquivo": "assets/certificados/2024-08-frontend-alura.pdf",
-    "tecnologias": [
-      "React",
-      "TypeScript",
-      "Sass",
-      "Git"
-    ],
-    "descricao": "Trilha completa cobrindo boas práticas de organização de código frontend, TypeScript tipagem estática e empacotamento com Vite."
-  },
-  {
-    "titulo": "Desenvolvimento Backend com Node.js",
-    "instituicao": "Rocketseat",
-    "data": "2025-01-18",
-    "cargaHoraria": "60h",
-    "arquivo": "assets/certificados/2025-01-backend-nodejs.pdf",
-    "tecnologias": [
-      "Node.js",
-      "Express",
-      "Prisma",
-      "PostgreSQL"
-    ],
-    "descricao": "Modelagem de bancos de dados relacionais, criação de rotas RESTful integradas a middleware de autenticação JWT e testes com Jest."
+    "descricao": "Apresentação na modalidade Comunicação Oral Curta sobre a ocupação dos pacientes notificados versus o risco de contrair dengue."
   }
 ]

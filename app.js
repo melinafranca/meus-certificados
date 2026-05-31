@@ -1,8 +1,6 @@
-// URL do arquivo de dados com os certificados
 const urlDados = 'certificados.json';
 let todosCertificados = [];
 
-// Função para formatar a data (ex: 2024-02-15 -> 15 de fev. de 2024)
 function formatarDataLonga(dataString) {
     if (!dataString) return '';
     try {
@@ -10,13 +8,12 @@ function formatarDataLonga(dataString) {
         if (parts.length !== 3) return dataString;
         const [year, month, day] = parts;
         const dateObj = new Date(parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10));
-        return dateObj.toLocaleDateString('pt-BR', { year: 'numeric', month: 'short', day: 'numeric' });
+        return dateObj.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
     } catch (e) {
         return dataString;
     }
 }
 
-// Renderiza a lista de certificados com base nos filtros
 function renderizarCertificados(certificados) {
     const grid = document.getElementById('grid-certificados');
     const emptyState = document.getElementById('empty-state');
@@ -34,26 +31,43 @@ function renderizarCertificados(certificados) {
 
     certificados.forEach(cert => {
         const card = document.createElement('div');
-        card.className = "bg-[#161b22] border border-[#30363d] rounded-xl p-5 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between";
+        card.className = "cert-card";
 
         const tagsHTML = cert.tecnologias.map(tech => 
-            `<span class="bg-[#58a6ff]/10 text-[#58a6ff] border border-[#58a6ff]/15 text-3xs font-semibold px-2 py-0.5 rounded-full">${tech}</span>`
+            `<span class="tag">${tech}</span>`
         ).join(' ');
 
         card.innerHTML = `
             <div>
-                <span class="text-3xs text-[#58a6ff] font-bold uppercase tracking-wider">${formatarDataLonga(cert.data)}</span>
-                <h3 class="text-base font-bold text-[#f0f6fc] leading-snug mt-1 mb-2">${cert.titulo}</h3>
-                <p class="text-xs text-[#c9d1d9] mb-1"><strong class="text-[#8b949e]">Instituição:</strong> ${cert.instituicao}</p>
-                <p class="text-xs text-[#c9d1d9] mb-2"><strong class="text-[#8b949e]">Carga Horária:</strong> ${cert.cargaHoraria}</p>
-                ${cert.descricao ? `<p class="text-3xs text-[#8b949e] bg-[#0d1117] p-2 rounded-lg mb-4 border border-[#30363d]/55">${cert.descricao}</p>` : ''}
+                <span class="card-date">${formatarDataLonga(cert.data)}</span>
+                <h3 class="card-title">${cert.titulo}</h3>
+                
+                <div class="card-info">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>${cert.instituicao}</span>
+                </div>
+                
+                <div class="card-info" style="margin-bottom: 1rem;">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Carga Horária: ${cert.cargaHoraria}</span>
+                </div>
+
+                <!-- Miniatura reposicionada: Fica imediatamente ANTES da descrição -->
+                ${cert.miniatura ? `
+                    <div class="card-thumbnail">
+                        <img src="${cert.miniatura}" alt="Miniatura de ${cert.titulo}">
+                    </div>
+                ` : ''}
+
+                <!-- Descrição / Resumo -->
+                ${cert.descricao ? `<p class="card-desc">${cert.descricao}</p>` : ''}
             </div>
-            <div class="pt-3 border-t border-[#30363d] mt-4 flex flex-col gap-2">
-                <div class="flex flex-wrap gap-1 leading-none text-[#c9d1d9]">
+            
+            <div class="card-footer">
+                <div class="card-tags">
                     ${tagsHTML}
                 </div>
-                <a href="${cert.arquivo}" target="_blank" rel="noopener noreferrer" 
-                   class="block text-center w-full bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] hover:border-[#8b949e] text-[#c9d1d9] hover:text-[#f0f6fc] font-medium py-2 px-3 rounded-lg transition-colors text-xs mt-3">
+                <a href="${cert.arquivo}" target="_blank" rel="noopener noreferrer" class="btn-view">
                     Visualizar Certificado
                 </a>
             </div>
@@ -62,12 +76,10 @@ function renderizarCertificados(certificados) {
     });
 }
 
-// Popula o select dropdown das instituições disponíveis no JSON
 function popularInstituicoes(certificados) {
     const select = document.getElementById('select-instituicao');
     const instituicoes = Array.from(new Set(certificados.map(c => c.instituicao))).sort();
     
-    // Reseta exceto a primeira opção
     select.innerHTML = '<option value="">Todas as Instituições</option>';
     
     instituicoes.forEach(inst => {
@@ -78,7 +90,6 @@ function popularInstituicoes(certificados) {
     });
 }
 
-// Aplica filtros de texto, dropdown de instituição e ordenação
 function aplicarFiltros() {
     const textBusca = document.getElementById('input-busca').value.toLowerCase();
     const instSelecionada = document.getElementById('select-instituicao').value;
@@ -95,7 +106,6 @@ function aplicarFiltros() {
         return matchesBusca && matchesInst;
     });
 
-    // Ordenação
     filtrados.sort((a, b) => {
         const dataA = new Date(a.data + 'T00:00:00').getTime();
         const dataB = new Date(b.data + 'T00:00:00').getTime();
@@ -105,18 +115,15 @@ function aplicarFiltros() {
     renderizarCertificados(filtrados);
 }
 
-// Carrega os dados assincronamente ao abrir o navegador
 async function carregarCertificados() {
     try {
         const resposta = await fetch(urlDados);
         if (!resposta.ok) throw new Error('Erro ao carregar o JSON: ' + resposta.statusText);
         todosCertificados = await resposta.json();
 
-        // Inicializa UI
         popularInstituicoes(todosCertificados);
         aplicarFiltros();
         
-        // Adiciona Event Listeners
         document.getElementById('input-busca').addEventListener('input', aplicarFiltros);
         document.getElementById('select-instituicao').addEventListener('change', aplicarFiltros);
         document.getElementById('select-ordem').addEventListener('change', aplicarFiltros);
@@ -124,9 +131,9 @@ async function carregarCertificados() {
     } catch (erro) {
         console.error('Falha ao processar carregarCertificados:', erro);
         document.getElementById('grid-certificados').innerHTML = `
-            <div class="col-span-full text-center text-[#ff7b72] py-12">
-                <p class="font-bold">Infelizmente, ocorreu um erro ao carregar os dados.</p>
-                <p class="text-xs text-[#8b949e] mt-1">${erro.message}</p>
+            <div style="grid-column: 1 / -1; text-align: center; color: #dc2626; padding: 4rem 0; background-color: #fef2f2; border-radius: 1rem; border: 1px solid #fee2e2;">
+                <p style="font-weight: bold; font-size: 1.125rem;">Ocorreu um erro ao carregar os dados.</p>
+                <p style="font-size: 0.875rem; margin-top: 0.5rem; opacity: 0.8;">${erro.message}</p>
             </div>
         `;
     }
