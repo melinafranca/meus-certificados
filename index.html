@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados | Melina França</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] flex flex-col min-h-screen">
+
+    <!-- Header / Banner -->
+    <header class="py-12 bg-[#161b22] border-b border-[#30363d] text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl font-extrabold text-[#f0f6fc] tracking-tight">Melina França</h1>
+            <p class="text-[#8b949e] mt-2 text-sm max-w-lg mx-auto">Histórico acadêmico e de desenvolvimento profissional em ordem cronológica</p>
+        </div>
+    </header>
+
+    <!-- Barra de Filtros e Busca -->
+    <section class="max-w-5xl mx-auto w-full px-4 mt-8">
+        <div class="bg-[#161b22] border border-[#30363d] rounded-xl p-5 shadow-xs flex flex-col md:flex-row gap-3 items-center justify-between">
+            <div class="relative w-full md:w-80">
+                <input
+                    type="text"
+                    id="input-busca"
+                    placeholder="Pesquisar certificado, tag ou escola..."
+                    class="w-full pl-4 pr-10 py-2 border border-[#30363d] rounded-lg text-sm bg-[#0d1117] hover:bg-[#1f242c] focus:outline-none focus:ring-1 focus:ring-[#58a6ff] focus:border-[#58a6ff] transition-all text-[#f0f6fc] placeholder-[#8b949e]"
+                />
+            </div>
+            <div class="flex flex-wrap gap-3 items-center w-full md:w-auto">
+                <select
+                    id="select-ordem"
+                    class="px-3 py-2 border border-[#30363d] rounded-lg text-sm bg-[#21262d] hover:bg-[#30363d] focus:outline-none text-[#c9d1d9] font-medium w-full sm:w-auto cursor-pointer"
+                >
+                    <option value="reversa">Mais Recentes Primeiro</option>
+                    <option value="cronologica">Mais Antigos Primeiro</option>
+                </select>
+                <select
+                    id="select-instituicao"
+                    class="px-3 py-2 border border-[#30363d] rounded-lg text-sm bg-[#21262d] hover:bg-[#30363d] focus:outline-none text-[#c9d1d9] font-medium w-full sm:w-auto cursor-pointer"
+                >
+                    <option value="">Todas as Instituições</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid / Linha de Tempo -->
+    <main class="max-w-5xl mx-auto w-full px-4 py-8 flex-1">
+        <div id="grid-certificados" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Os cards serão inseridos aqui -->
+        </div>
+        
+        <!-- Estado vazio -->
+        <div id="empty-state" class="hidden text-center py-16 bg-[#161b22] border border-[#30363d] rounded-xl p-6">
+            <p class="text-[#8b949e] font-medium">Nenhum certificado encontrado para os filtros selecionados.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-[#8b949e] border-t border-[#30363d] bg-[#161b22] text-xs font-medium w-full mt-auto">
+        <p>© 2026 • Melina França</p>
+        <p class="mt-1 text-[#8b949e]/60">Gerado automaticamente & publicado com GitHub Pages</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
