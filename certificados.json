@@ -17,7 +17,7 @@
     "arquivo": "assets/certificados/2019/pdf/processo-de-incorporacao-de-tecnologia-em-saúde-no-sus-2019.pdf",
     "miniatura": "assets/certificados/2019/img/processo-de-incorporacao-de-tecnologia-em-saúde-no-sus-2019.png",
     "tecnologias": ["Políticas Públicas", "Gestão de Saúde", "Avaliação de Tecnologias"],
-    "descricao": "Qualificação focada no fluxo de incorporação de tecnologias, análise de custo-efetividade e impacto orçamentário no SUS."
+    "descricao": "Capacitação técnica sobre o fluxo de incorporação de tecnologias no SUS, focada em revisar evidências de efetividade, segurança e análise de custo-efetividade para otimizar a alocação de recursos em saúde pública.."
   },
   {
     "titulo": "Saúde da População Negra",
@@ -26,8 +26,8 @@
     "cargaHoraria": "45h",
     "arquivo": "assets/certificados/2019/pdf/saude-da-populacao-negra-fiocruz-2019.pdf",
     "miniatura": "assets/certificados/2019/img/saude-da-populacao-negra-fiocruz-2019.png",
-    "tecnologias": ["Inclusão", "Equidade", "Saúde Pública"],
-    "descricao": "Determinantes Sociais da Saúde no contexto da Política Nacional Integral da População Negra e o enfrentamento das inequidades históricas."
+    "tecnologias": ["Inclusão", "Equidade", "Saúde Pública", "Determinantes Sociais da Saúde"],
+    "descricao": "Aplicação dos Determinantes Sociais da Saúde (DSS) no contexto da Política Nacional Integral da População Negra (PNIPN) e o enfrentamento de inequidades históricas."
   },
   {
     "titulo": "Vigilância em Saúde Pública",
@@ -37,7 +37,7 @@
     "arquivo": "assets/certificados/2019/pdf/vigilancia-em-saude-publica-proepi-2019.pdf",
     "miniatura": "assets/certificados/2019/img/vigilancia-em-saude-publica-proepi-2019.png",
     "tecnologias": ["Vigilância Epidemiológica", "Saúde Pública", "Monitoramento"],
-    "descricao": "Principais indicadores de saúde voltados a análise de dados propulacionais e formação em vigilância epidemiológica."
+    "descricao": "Abordagem dos principais indicadores de saúde voltados a análise de dados populacionais e formação em vigilância epidemiológica."
   },
   {
     "titulo": "Gerenciamento de Resíduo de Serviço de Saúde",
@@ -46,8 +46,8 @@
     "cargaHoraria": "30h",
     "arquivo": "assets/certificados/2020/pdf/gerenciamento-de-residuo-de-servico-de-saude-ufrrj-2020.pdf",
     "miniatura": "assets/certificados/2020/img/gerenciamento-de-residuo-de-servico-de-saude-ufrrj-2020.png",
-    "tecnologias": ["Compliance Ambiental", "Legislação Sanitária", "Gestão de Resíduos"],
-    "descricao": "Análise de indicadores ambientais e gestão de resíduos sólidos em serviços de saúde."
+    "tecnologias": ["Indicadores Ambientais", "Gestão de Resíduos", "Educação Ambiental"],
+    "descricao": "Curso de extensão com foco na gestão ambiental hospitalar, abordando desde a segregação e transporte até a disposição final de resíduos perigosos conforme as normas da ANVISA."
   },
   {
     "titulo": "Gestão de Riscos de Emergências em Saúde Pública no contexto da Covid-19",
@@ -57,7 +57,7 @@
     "arquivo": "assets/certificados/2022/pdf/gestao-de-riscos-de-emergencias-em-saude-publica-no-contexto-da-covid19-fiocruz-2022.pdf",
     "miniatura": "assets/certificados/2022/img/gestao-de-riscos-de-emergencias-em-saude-publica-no-contexto-da-covid19-fiocruz-2022.png",
     "tecnologias": ["Gestão de Riscos", "Comunicação Estratégica", "Gestão da Informação"],
-    "descricao": "Abordagem aprofundada em sistemas de alerta, preparação para emergências, gestão do conhecimento e comunicação de risco."
+    "descricao": "Treinamento especializado em resposta a emergências sanitárias, com ênfase em comunicação de risco, logística de resposta e gestão da informação."
   },
   {
     "titulo": "Treinamento em Epidemiologia Aplicada aos Serviços do SUS - EpiSUS Fundamental",
@@ -66,8 +66,8 @@
     "cargaHoraria": "180h",
     "arquivo": "assets/certificados/2022/pdf/epidemiologia-aplicada-aos-serviços-do-sus-fundamental-episus-fundamental-2022.pdf",
     "miniatura": "assets/certificados/2022/img/epidemiologia-aplicada-aos-serviços-do-sus-fundamental-episus-fundamental-2022.png",
-    "tecnologias": ["Epidemiologia", "Coleta e Análise de Dados", "Investigação"],
-    "descricao": "Gestão da informação em saúde, investigação epidemiológica e formulação de políticas públicas baseadas em evidências."
+    "tecnologias": ["Epidemiologia", "Análise de Dados", "Investigação epidemiológica", "Análise de risco"],
+    "descricao": "Treinamento em epidemiologia de campo aplicado aos serviços do SUS, abrangendo investigação de surtos, análise SWOT e monitoramento epidemiológico."
   },
   {
     "titulo": "Indicadores de Saúde",
@@ -76,8 +76,8 @@
     "cargaHoraria": "20h",
     "arquivo": "assets/certificados/2022/pdf/indicadores-de-saude-unasus-2022.pdf",
     "miniatura": "assets/certificados/2022/img/indicadores-de-saude-unasus-2022.png",
-    "tecnologias": ["KPIs em Saúde", "Data Analytics", "TabNet/TabWin"],
-    "descricao": "Gestão de dados e cálculo de indicadores de desempenho em saúde para quantificação e avaliação sistêmica de dados."
+    "tecnologias": ["KPIs em Saúde", "Análise de Dados", "TabNet/TabWin"],
+    "descricao": "Capacitação sobre o cálculo e a interpretação de indicadores em saúde utilizando sistemas como TabNet/TabWin e monitoramento de desempenho na Rede Nacional de Dados em Saúde (RNDS)."
   },
   {
     "titulo": "EpiSUS Avançado (Processo Seletivo da 19ª Turma)",
@@ -86,8 +86,8 @@
     "cargaHoraria": "24h",
     "arquivo": "assets/certificados/2022/pdf/treinamento-em-epidemiologia-episus-avançado-2022.pdf",
     "miniatura": "assets/certificados/2022/img/treinamento-em-epidemiologia-episus-avançado-2022.png",
-    "tecnologias": ["Epidemiologia Avançada", "Avaliação de Casos", "Saúde Pública"],
-    "descricao": "Declaração de participação na Terceira Etapa do rigoroso processo seletivo para o programa de treinamento avançado do Governo Federal."
+    "tecnologias": ["Epidemiologia Avançada", "Avaliação de Casos", "Saúde Pública", "Investigação epidemiológica"],
+    "descricao": "Simulação de surto de Sarampo e desenvolvimento de investigação epidemiológica, comunicação de risco e implementação de estratégias de controle."
   },
   {
     "titulo": "Introdução ao Mundo dos Dados",
@@ -107,7 +107,7 @@
     "arquivo": "assets/certificados/2025/pdf/programa-de-mentoria-elas-na-ia-womakerscode.pdf",
     "miniatura": "assets/certificados/2025/img/programa-de-mentoria-elas-na-ia-womakerscode.png",
     "tecnologias": ["Microsoft Azure", "Machine Learning", "IA Responsável"],
-    "descricao": "Desenvolvimento de competências em Nuvem, IA generativa, processamento de linguagem natural e mineração de conhecimento."
+    "descricao": "Mentoria em IA aplicada com foco na construção de soluções utilizando Microsoft Azure, IA generativa, processamento de linguagem natural e insights em dados."
   },
   {
     "titulo": "Hacking de Carreira",
@@ -117,7 +117,7 @@
     "arquivo": "assets/certificados/2025/pdf/hacking-de-carreira-womakerscode-2025.pdf",
     "miniatura": "assets/certificados/2025/img/hacking-de-carreira-womakerscode-2025.png",
     "tecnologias": ["Planejamento de Carreira", "Soft Skills", "Empregabilidade"],
-    "descricao": "Programa imersivo focado no desenvolvimento de soft skills, planejamento estratégico de carreira e preparação para processos seletivos em tech."
+    "descricao": "Programa de orientação profissional voltado para a transição de carreira em tecnologia, focando em soft skills, branding profissional e estratégias de empregabilidade em ambientes corporativos tech."
   },
   {
     "titulo": "Computação em Nuvem | AWS Discovery Day",
@@ -137,7 +137,7 @@
     "arquivo": "assets/certificados/2025/pdf/gestao-de-conflitos-enap-2025.pdf",
     "miniatura": "assets/certificados/2025/img/gestao-de-conflitos-enap-2025.png",
     "tecnologias": ["Negociação", "Gestão de Pessoas", "Soft Skills"],
-    "descricao": "Estudo de abordagens e estratégias eficazes de negociação voltadas para a mediação e gestão de conflitos em ambientes organizacionais."
+    "descricao": "Curso de especialização em mediação e negociação, com foco em estratégias para gerir impasses, melhorar a comunicação interpessoal e promover a colaboração em equipes de trabalho."
   },
   {
     "titulo": "Elas Na IA - Nível Avançado",
@@ -147,7 +147,7 @@
     "arquivo": "assets/certificados/2025/pdf/elas-na-ia-avançado-womakerscode-2025.pdf",
     "miniatura": "assets/certificados/2025/img/elas-na-ia-avançado-womakerscode-2025.png",
     "tecnologias": ["Engenharia de IA", "Microsoft AI-102", "IA Generativa"],
-    "descricao": "Aulas avançadas e mentorias em grupo como preparação direta para a certificação oficial AI-102 (Azure AI Engineer Associate)."
+    "descricao": "Programa de especialização em Engenharia de IA, com foco na preparação para a certificação Microsoft AI-102 e desenvolvimento de competências em serviços na nuvem."
   },
   {
     "titulo": "Preparação para Certificação - AWS AI Practitioner (Semana 1)",
@@ -157,7 +157,7 @@
     "arquivo": "assets/certificados/2026/pdf/aws-ai-practitioner-semana-1-2026.pdf",
     "miniatura": "assets/certificados/2026/img/aws-ai-practitioner-semana-1-2026.png",
     "tecnologias": ["AWS", "Inteligência Artificial", "Cloud Concepts"],
-    "descricao": "Trilha de aprendizagem focada nos fundamentos de Inteligência Artificial para a preparação oficial da certificação AWS AI Practitioner."
+    "descricao": "Trilha técnica de aprofundamento nos serviços de IA da AWS, abrangendo governança, conformidade e arquitetura de soluções de Inteligência Artificial para preparação à certificação oficial."
   },
   {
     "titulo": "IA - Aplicações no Governo Federal",
@@ -167,7 +167,7 @@
     "arquivo": "assets/certificados/2026/pdf/ia-aplicacoes-no-governo-federal-2026.pdf",
     "miniatura": "assets/certificados/2026/img/ia-aplicacoes-no-governo-federal-2026.png",
     "tecnologias": ["IA Generativa", "LLMs", "NLP", "Visão Computacional"],
-    "descricao": "Módulos sobre o uso de tecnologias preditivas, antifraude, biometria e grandes modelos de linguagem (LLMs) no setor público."
+    "descricao": "Estudo das aplicações práticas de Inteligência Artificial no setor público, abordando visão computacional, sistemas antifraude e modelos de linguagem para otimização de fluxos governamentais."
   },
   {
     "titulo": "Preparação para Certificação - AWS AI Practitioner (Semana 2)",
@@ -187,7 +187,7 @@
     "arquivo": "assets/certificados/2026/pdf/programa-re-star-escola-da-nuvem-2026.pdf",
     "miniatura": "assets/certificados/2026/img/programa-re-star-escola-da-nuvem-2026.png",
     "tecnologias": ["AWS", "Cloud Computing", "Mentoria Técnica", "Desenvolvimento"],
-    "descricao": "Conclusão do rigoroso programa oficial, combinando aulas técnicas síncronas, mentoria contínua e desenvolvimento de habilidades na Nuvem."
+    "descricao": "Formação técnica intensiva em computação em nuvem AWS e Inteligência Artificial, capacitando para o desenvolvimento de soluções escaláveis, infraestrutura de dados e boas práticas em ambientes cloud."
   },
   {
     "titulo": "Preparação para Certificação - AWS AI Practitioner (Semana 3)",
@@ -197,7 +197,7 @@
     "arquivo": "assets/certificados/2026/pdf/aws-ai-practitioner-semana-3-2026.pdf",
     "miniatura": "assets/certificados/2026/img/aws-ai-practitioner-semana-3-2026.png",
     "tecnologias": ["AWS", "GenAI", "Segurança e Ética"],
-    "descricao": "Etapa final da trilha AWS, consolidando conhecimentos sobre governança, conformidade e casos de uso avançados em IA Generativa."
+    "descricao": "Trilha de aprofundamento em governança, IA responsáveis e casos de uso em IA Generativa."
   },
   {
     "titulo": "Hackathon Gen.AI: Talento Tech 3.0",
@@ -206,8 +206,8 @@
     "cargaHoraria": "150h",
     "arquivo": "assets/certificados/2026/pdf/hackathon-escola-da-nuvem-2026.pdf",
     "miniatura": "assets/certificados/2026/img/hackathon-escola-da-nuvem-2026.png",
-    "tecnologias": ["Desenvolvimento GenAI", "Inovação", "Arquitetura AWS"],
-    "descricao": "Participação no Hacking For Good com a apresentação da solução ARIA. Foco prático no desenvolvimento de competências tecnológicas para o mercado."
+    "tecnologias": ["GenAI", "Inovação", "AWS", "Hackathon"],
+    "descricao": "Desenvolvimento e apresentação do Projeto ARIA (Análise Regulatória com Inteligência Artificial), baseado em nuvem (AWS), IA Generativa, metodologias ágeis e FinOps."
   },
   {
     "titulo": "Resolução de Problemas e Tomada de Decisão",
@@ -217,7 +217,7 @@
     "arquivo": "assets/certificados/2026/pdf/resolucao-de-problemas-e-tomada-de-decisao-capacita-coop-2026.pdf",
     "miniatura": "assets/certificados/2026/img/resolucao-de-problemas-e-tomada-de-decisao-capacita-coop-2026.png",
     "tecnologias": ["Problem Solving", "Estratégia", "Soft Skills"],
-    "descricao": "Abordagem metodológica sobre análise estruturada e o uso de estratégias assertivas na hora de solucionar impasses empresariais."
+    "descricao": "Capacitação metodológica em resolução de problemas, utilizando ferramentas de análise criativa e tomada de decisão estratégica para gerir conflitos e otimizar processos operacionais."
   },
   {
     "titulo": "Brainstorming",
@@ -227,7 +227,7 @@
     "arquivo": "assets/certificados/2026/pdf/brainstorming-capacita-coop-2026.pdf",
     "miniatura": "assets/certificados/2026/img/brainstorming-capacita-coop-2026.png",
     "tecnologias": ["Inovação", "Engajamento", "Criatividade"],
-    "descricao": "Técnicas modernas para geração de ideias e engajamento em equipe, adaptadas tanto para ambientes presenciais quanto modelos remotos."
+    "descricao": "Treinamento em dinâmicas de inovação colaborativa, aplicando técnicas de brainstorming para fomentar a criatividade em equipe e solucionar desafios organizacionais de forma ágil."
   },
   {
     "titulo": "Fundamentos e tendências para gestão estratégica de dados",
@@ -237,16 +237,16 @@
     "arquivo": "assets/certificados/2026/pdf/fundamentos-e-tendencias-para-gestao-estrategica-de-dados-2026.pdf",
     "miniatura": "assets/certificados/2026/img/fundamentos-e-tendencias-para-gestao-estrategica-de-dados-2026.png",
     "tecnologias": ["Gestão de Dados", "Tendências Tech", "Estratégia"],
-    "descricao": "Aula mestra detalhando frameworks e inovações que moldam a gestão estrutural e as estratégias em arquiteturas orientadas a dados."
+    "descricao": "Aula técnica sobre frameworks de governança e arquitetura de dados, explorando tendências de mercado para ambientes analíticos em organizações modernas."
   },
   {
     "titulo": "Progra{m}aria Encontros / Carreira Tech",
     "instituicao": "Progra{m}aria",
-    "data": "2026-05-20",
+    "data": "2026-04-23",
     "cargaHoraria": "2h",
     "arquivo": "assets/certificados/2026/pdf/programaria-encontros-carreira-tech-2026.pdf",
     "miniatura": "assets/certificados/2026/img/programaria-encontros-carreira-tech-2026.png",
     "tecnologias": ["Carreira Tech", "Networking", "Comunidade"],
-    "descricao": "Participação no evento voltado para mulheres no ecossistema tecnológico, impulsionando a troca de experiências e o fortalecimento do networking profissional."
+    "descricao": "Participação em fórum de networking focado em mulheres na tecnologia, abordando estratégias para atuação remota e aceleração de carreira no mercado internacional."
   }
 ]

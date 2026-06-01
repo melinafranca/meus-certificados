@@ -71,6 +71,16 @@ body {
     font-weight: 500;
 }
 
+.profile-photo {
+    width: 150px;       /* Tamanho da foto */
+    height: 150px;      /* Altura igual à largura para ficar um círculo perfeito */
+    border-radius: 50%; /* Transforma o quadrado em círculo */
+    border: 3px solid #ea580c; /* Borda laranja que conecta com seu nome */
+    object-fit: cover;  /* Garante que a foto não fique distorcida */
+    margin: 0 auto 1.5rem auto; /* Centraliza a foto e cria espaço abaixo dela */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+}
+
 /* Barra de Filtros */
 .filters-section {
     max-width: 72rem;
