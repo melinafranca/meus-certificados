@@ -127,7 +127,7 @@
     "arquivo": "assets/certificados/2025/pdf/aws-discovery-day-kasolution-2025.pdf",
     "miniatura": "assets/certificados/2025/img/aws-discovery-day-kasolution-2025.png",
     "tecnologias": ["Cloud Computing", "AWS", "Infraestrutura"],
-    "descricao": "Introdução oficial aos conceitos fundamentais de computação em nuvem e à proposta de valor do ecossistema Amazon Web Services."
+    "descricao": "Introdução aos conceitos fundamentais de computação em nuvem e à proposta de valor do ecossistema Amazon Web Services."
   },
   {
     "titulo": "Gestão de Conflitos",
@@ -216,7 +216,7 @@
     "cargaHoraria": "30m",
     "arquivo": "assets/certificados/2026/pdf/resolucao-de-problemas-e-tomada-de-decisao-capacita-coop-2026.pdf",
     "miniatura": "assets/certificados/2026/img/resolucao-de-problemas-e-tomada-de-decisao-capacita-coop-2026.png",
-    "tecnologias": ["Problem Solving", "Estratégia", "Soft Skills"],
+    "tecnologias": ["Resolução de problemas", "Estratégia", "Soft Skills"],
     "descricao": "Capacitação metodológica em resolução de problemas, utilizando ferramentas de análise criativa e tomada de decisão estratégica para gerir conflitos e otimizar processos operacionais."
   },
   {
