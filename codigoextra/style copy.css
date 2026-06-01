@@ -10,7 +10,7 @@
     --slate-200: #e2e8f0;
     --slate-400: #94a3b8;
     --slate-500: #64748b;
-    --slate-600: #0f172a;
+    --slate-600: #475569;
     --slate-800: #1e293b;
     --slate-900: #0f172a;
     --bg-header: rgba(221, 221, 221, 0.5);
@@ -37,38 +37,42 @@ body {
     background-color: #fed7aa;
 }
 
-/* Header Ajustado para Fundo Amarelado */
+/* Header */
 .site-header {
-    background-color: #fbf2ce; /* Cor escolhida */
-    padding: 7rem 1rem;
+    background-color: var(--bg-header);
+    padding: 6rem 1rem;
     text-align: center;
-    border-bottom: 1px solid #f4e8b8; /* Borda sutil que combina */
+    border-bottom: 1px solid var(--slate-100);
+}
+
+.header-content {
+    max-width: 48rem;
+    margin: 0 auto;
 }
 
 .header-title {
-    font-size: 4rem; /* Aumentado para 4rem */
+    font-size: 3rem;
     font-weight: 800;
     color: var(--slate-900);
-    letter-spacing: -0.05em;
+    letter-spacing: -0.025em;
     margin-bottom: 1.5rem;
 }
 
 .header-title span {
-    color: #ea580c; /* Laranja mais escuro (orange-600) para melhor contraste */
-    font-weight: 800;
+    color: var(--orange-500);
 }
 
 .header-subtitle {
-    color: var(--slate-900); /* Escurecido para melhor leitura */
-    font-size: 1.25rem; /* Aumentado */
-    font-weight: 600; /* Mais negrito */
-    margin-bottom: 1rem;
+    color: var(--slate-800);
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
 }
 
 .header-desc {
-    color: var(--slate-600); /* Escurecido para melhor leitura */
-    font-size: 1rem; /* Aumentado */
-    font-weight: 500;
+    color: var(--slate-500);
+    font-size: 0.875rem;
 }
 
 /* Barra de Filtros */

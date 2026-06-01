@@ -1,6 +1,7 @@
 const urlDados = 'certificados.json';
 let todosCertificados = [];
 
+// Formata a data (ex: 2026-05-15 -> 15 de maio de 2026)
 function formatarDataLonga(dataString) {
     if (!dataString) return '';
     try {
@@ -14,6 +15,7 @@ function formatarDataLonga(dataString) {
     }
 }
 
+// Renderiza a lista de certificados
 function renderizarCertificados(certificados) {
     const grid = document.getElementById('grid-certificados');
     const emptyState = document.getElementById('empty-state');
@@ -52,11 +54,11 @@ function renderizarCertificados(certificados) {
                     <span>Carga Horária: ${cert.cargaHoraria}</span>
                 </div>
 
-                <!-- Miniatura reposicionada: Fica imediatamente ANTES da descrição -->
+                <!-- Miniatura reposicionada e AGORA CLICÁVEL -->
                 ${cert.miniatura ? `
-                    <div class="card-thumbnail">
+                    <a href="${cert.arquivo}" target="_blank" rel="noopener noreferrer" class="card-thumbnail" style="display: block; cursor: pointer;" title="Clique para visualizar o certificado">
                         <img src="${cert.miniatura}" alt="Miniatura de ${cert.titulo}">
-                    </div>
+                    </a>
                 ` : ''}
 
                 <!-- Descrição / Resumo -->
@@ -76,36 +78,65 @@ function renderizarCertificados(certificados) {
     });
 }
 
-function popularInstituicoes(certificados) {
-    const select = document.getElementById('select-instituicao');
+// Popula os selects dinamicamente (Instituições e Anos)
+function popularFiltros(certificados) {
+    const selectInst = document.getElementById('select-instituicao');
+    const selectAno = document.getElementById('select-ano');
+    
+    // Extrai instituições únicas
     const instituicoes = Array.from(new Set(certificados.map(c => c.instituicao))).sort();
     
-    select.innerHTML = '<option value="">Todas as Instituições</option>';
+    // Extrai anos únicos (pegando os 4 primeiros caracteres da data "YYYY-MM-DD")
+    const anos = Array.from(new Set(certificados.map(c => c.data.split('-')[0]))).sort((a, b) => b - a);
     
-    instituicoes.forEach(inst => {
-        const sOption = document.createElement('option');
-        sOption.value = inst;
-        sOption.textContent = inst;
-        select.appendChild(sOption);
-    });
+    // Preenche as opções de Instituição
+    if(selectInst) {
+        selectInst.innerHTML = '<option value="">Todas as Instituições</option>';
+        instituicoes.forEach(inst => {
+            const sOption = document.createElement('option');
+            sOption.value = inst;
+            sOption.textContent = inst;
+            selectInst.appendChild(sOption);
+        });
+    }
+
+    // Preenche as opções de Ano
+    if(selectAno) {
+        selectAno.innerHTML = '<option value="">Todos os Anos</option>';
+        anos.forEach(ano => {
+            const opt = document.createElement('option');
+            opt.value = ano;
+            opt.textContent = ano;
+            selectAno.appendChild(opt);
+        });
+    }
 }
 
+// Aplica todos os filtros simultaneamente
 function aplicarFiltros() {
     const textBusca = document.getElementById('input-busca').value.toLowerCase();
     const instSelecionada = document.getElementById('select-instituicao').value;
     const ordemSelecionada = document.getElementById('select-ordem').value;
+    const selectAno = document.getElementById('select-ano');
+    const anoSelecionado = selectAno ? selectAno.value : '';
 
     let filtrados = todosCertificados.filter(cert => {
+        // Filtro de Texto (Busca)
         const matchesBusca = 
             cert.titulo.toLowerCase().includes(textBusca) ||
             cert.instituicao.toLowerCase().includes(textBusca) ||
             cert.tecnologias.some(tech => tech.toLowerCase().includes(textBusca));
             
+        // Filtro de Instituição
         const matchesInst = instSelecionada === '' || cert.instituicao === instSelecionada;
 
-        return matchesBusca && matchesInst;
+        // Filtro de Ano
+        const matchesAno = anoSelecionado === '' || cert.data.startsWith(anoSelecionado);
+
+        return matchesBusca && matchesInst && matchesAno;
     });
 
+    // Ordenação
     filtrados.sort((a, b) => {
         const dataA = new Date(a.data + 'T00:00:00').getTime();
         const dataB = new Date(b.data + 'T00:00:00').getTime();
@@ -115,18 +146,26 @@ function aplicarFiltros() {
     renderizarCertificados(filtrados);
 }
 
+// Inicializa o processo
 async function carregarCertificados() {
     try {
         const resposta = await fetch(urlDados);
         if (!resposta.ok) throw new Error('Erro ao carregar o JSON: ' + resposta.statusText);
         todosCertificados = await resposta.json();
 
-        popularInstituicoes(todosCertificados);
+        // Inicializa UI
+        popularFiltros(todosCertificados);
         aplicarFiltros();
         
+        // Adiciona os monitores de eventos
         document.getElementById('input-busca').addEventListener('input', aplicarFiltros);
         document.getElementById('select-instituicao').addEventListener('change', aplicarFiltros);
         document.getElementById('select-ordem').addEventListener('change', aplicarFiltros);
+        
+        const selectAno = document.getElementById('select-ano');
+        if (selectAno) {
+            selectAno.addEventListener('change', aplicarFiltros);
+        }
 
     } catch (erro) {
         console.error('Falha ao processar carregarCertificados:', erro);
